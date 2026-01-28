@@ -1,0 +1,67 @@
+name: RegionTokens
+version: 1.0.0
+description: A plugin that restricts player access to specific regions using time-based tokens.
+authors: [RegionTokens]
+main: com.regiontokens.RegionTokensPlugin
+api-version: 1.21
+load: POSTWORLD
+softdepend: [PlaceholderAPI]
+
+commands:
+  regiontokens:
+    description: Main command for RegionTokens
+    usage: /regiontokens <subcommand>
+    aliases: [rgtk]
+
+permissions:
+  regiontokens.role.admin:
+    description: Admin access to all RegionTokens commands
+    default: op
+  regiontokens.zones.enter:
+    description: Permission to enter token-restricted zones
+    default: true
+  regiontokens.zones.bypass.*:
+    description: Bypass all zones
+    default: op
+  regiontokens.token.use.*:
+    description: Use all tokens
+    default: op
+  regiontokens.admin.tool:
+    description: Use the zone tool
+    default: op
+  regiontokens.admin.zones.create:
+    description: Create zones
+    default: op
+  regiontokens.admin.zones.list:
+    description: List zones
+    default: op
+  regiontokens.admin.zones.kickto:
+    description: Set zone kick location
+    default: op
+  regiontokens.admin.zones.rename:
+    description: Rename zones
+    default: op
+  regiontokens.admin.zones.delete:
+    description: Delete zones
+    default: op
+  regiontokens.admin.zones.show:
+    description: Display zone outlines
+    default: op
+  regiontokens.admin.token.create:
+    description: Create tokens
+    default: op
+  regiontokens.admin.token.give:
+    description: Give tokens to players
+    default: op
+  regiontokens.admin.token.duration:
+    description: Change token duration
+    default: op
+  regiontokens.admin.tokens.lore:
+    description: Manage token lore
+    default: op
+  regiontokens.admin.tokens.rename:
+    description: Rename tokens
+    default: op
+  regiontokens.admin.token.delete:
+    description: Delete tokens
+    default: op

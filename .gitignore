@@ -1,0 +1,74 @@
+# Gradle
+.gradle/
+build/
+*.jar
+*.zip
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+*.swp
+*.swo
+*~
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# Plugin Runtime Data
+plugins/RegionTokens/
+playerdata.db
+*.db
+
+# Local development
+local.properties
+*.log
+*.pid
+
+# Environment
+.env
+.env.local
+
+# Compiled class files
+*.class
+
+# Package Files
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# IDE specific files
+.idea/*
+!.idea/runConfigurations/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# Gradle wrapper (optional to ignore, but keep in repo for consistency)
+# gradle-wrapper.jar
+# gradle-wrapper.properties
+
+# Yarn
+.yarn/
+.yarnrc
+
+# misc
+.cache/
+*.tmp

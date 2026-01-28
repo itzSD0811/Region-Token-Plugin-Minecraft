@@ -1,0 +1,113 @@
+plugin:
+  name: "RegionTokens"
+  version: "1.0.0"
+
+messages:
+  prefix: "&8[&bRegionTokens&8]&r"
+  
+  # Zone messages
+  zone:
+    created:
+      title: "&a&lZone Created"
+      subtitle: "&6{zoneName} &bsuccessfully created"
+    
+    renamed:
+      title: "&a&lZone Renamed"
+      subtitle: "&6{zoneName} &brenamed successfully"
+    
+    kick-location-set: "{prefix} &6Zone kick location set to &7X: &a{x} &7Y: &a{y} &7Z: &a{z}"
+    
+    list-header: "&8=== &bLIST OF ZONES (Page {page}/{total}) &8==="
+    list-item: "&fID: {id} - {zoneName}"
+    list-empty: "&cNo zones found."
+    deleted: "{prefix} &aZone &e{zoneName} &asuccessfully deleted."
+    show: "{prefix} &aDisplaying zone outline for &e{zoneName} &a(10 seconds)"
+    
+    error:
+      not-found: "&cZone not found."
+      not-selected: "&cYou must select a zone with the tool first."
+      kick-inside-zone: "{prefix} &cKick position must be outside the zone!"
+      invalid-name: "&cInvalid zone name."
+  
+  # Token messages
+  token:
+    created: "{prefix} &eToken created with ID: &a{id}, &eName: &a{tokenName}, &eDuration: &a{duration}s"
+    assigned: "{prefix} &eToken {tokenName} &eassigned to zone {zoneName}"
+    unassigned: "{prefix} &eToken {tokenName} &eunassigned from zone {zoneName}"
+    duration-changed: "{prefix} &eToken {tokenName} &eduration changed to &a{duration}s"
+    item-configured: "{prefix} &eToken {tokenName} &eitem configured as &f{itemMaterial} &e(Glowing: {glowing})"
+    renamed: "{prefix} &eToken {tokenName} &erenamed successfully"
+    given: "{prefix} Token {tokenName} given to {playerName} for {duration}s"
+    received: "{prefix} &aYou received token {tokenName} valid for {duration}s"
+    
+    lore:
+      added: "{prefix} &eLore line added to token {tokenName}"
+      set: "{prefix} &eLore line &c{lineNumber} &eupdated for token {tokenName}"
+      removed: "{prefix} &eLore line &4{lineNumber} &eremoved from token {tokenName}"
+    
+    list-header: "&8=== &bLIST OF TOKENS (Page {page}/{total}) &8==="
+    list-item: "&fID: {id} - {tokenName} (Zone: {zoneName})"
+    list-empty: "&cNo tokens found."
+    deleted: "{prefix} &aToken &e{tokenName} &asuccessfully deleted."
+    inventory-full: "{prefix} &cInventory full! Token stored in database but item not given to {playerName}."
+    inventory-full-self: "{prefix} &cYour inventory is full! Token stored in database."
+    
+    error:
+      not-found: "&cToken not found."
+      no-zone-assigned: "&cToken must be assigned to a zone first."
+      no-item-in-hand: "{prefix} &cYou must hold an item in your hand first!"
+      invalid-duration: "&cInvalid duration format. Use: 1h, 1m, 1s"
+      invalid-material: "&cInvalid material type."
+      invalid-lore-line: "&cInvalid lore line number."
+  
+  # Tool messages
+  tool:
+    given: "{prefix} &aZone tool given to you."
+    position1: "{prefix} &aPosition 1 set at &7X: &e{x} &7Y: &e{y} &7Z: &e{z}"
+    position2: "{prefix} &aPosition 2 set at &7X: &e{x} &7Y: &e{y} &7Z: &e{z}"
+    zone-selected: "{prefix} &aZone selected! To create the zone type: &e/rgtk zone create <zoneName>"
+    
+    error:
+      different-world: "&cBoth positions must be in the same world."
+      not-enough-perms: "&cYou don't have permission to use the zone tool."
+      not-selected: "{prefix} &cYou must select a zone with the tool first."
+  
+  # Access control messages
+  access:
+    denied: "&cYou don't have permission to enter this zone."
+    no-token: "&cYou need a token to enter this zone: {zoneName}"
+    token-expired: "&cYour token for {zoneName} has expired."
+    entry-success: "&aYou have entered {zoneName}. Time remaining: {time}s"
+    time-warning: "&eYour token is expiring soon! Time remaining: {time}s"
+    kicked: "&cYour token expired. You have been kicked from {zoneName}."
+  
+  # General messages
+  error:
+    invalid-usage: "&cInvalid usage. Type /rgtk help"
+    no-permission: "&cYou don't have permission to do this."
+    player-not-found: "&cPlayer not found."
+    command-error: "&cAn error occurred while executing the command."
+  
+  success:
+    general: "{prefix} &aOperation completed successfully."
+
+  plugin:
+    reloaded: "{prefix} &aPlugin reloaded successfully!"
+    reload-error: "{prefix} &cFailed to reload plugin. Check console for details."
+
+# Pagination settings
+pagination:
+  items-per-page: 5
+  
+# Particle settings
+particles:
+  zone-outline:
+    enabled: true
+    type: "REDSTONE"
+    color: "FF5555"
+    duration-ticks: 100
+    density: 1.0
+
+# Miscellaneous
+settings:
+  time-warning-threshold: 10
